@@ -12,52 +12,57 @@
 - **Dynamic Path Handling:** Automatically determine file paths relative to the project directory.
 
 ## Installation
+
 1. **Clone the repository:**
-```
-git clone https://github.com/yourusername/sql_framework.git
-```
+    ```bash
+    git clone https://github.com/yourusername/sql_framework.git
+    ```
 
 2. **Navigate to the project directory:**
-```
-cd sql_framework
-```
+    ```bash
+    cd sql_framework
+    ```
 
 3. **Install any required dependencies (if applicable).**
-```
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage  
+
 1. Ensure you have Python 3.x installed.
 
-2. Run the game by executing:
-```
-python linguistic_game/main.py 
-```
+2. Run the application by executing:
+    ```bash
+    python main.py
+    ```
 
-3. Follow the on-screen prompts to navigate, fight enemies, and enjoy the game.
+3. Follow the on-screen prompts to interact with the database, manage file information, and execute queries.
 
 ## Project Structure
+
 * **config/**: Contains configuration files.
   * ***\__init__.py***: Imports constants for database configuration.
   * ***constants.py***: Defines constants used throughout the database.
 
-* **src/**: Containts source code files.
+* **src/**: Contains source code files.
   * ***\__init__.py***: Initializes the source package and sets up logging.
-  * ***db_operations.py***: Functions for file handling and Insertion into the database.
+  * ***db_operations.py***: Functions for file handling and insertion into the database.
   * ***queries.py***: Provides SQL queries for table creation, insertion, and retrieval.
   * ***utils.py***: Utility functions for path handling.
 
-* **.gitignore.py**: Specifies files and directories to be ignored by Git (e.g., virtual environments, build artifacts).
+* **.gitignore**: Specifies files and directories to be ignored by Git (e.g., virtual environments, build artifacts).
 
-* **.gitatrributes.py**: Ensures consistent line endings across different operating systems in the repository.
+* **.gitattributes**: Ensures consistent line endings across different operating systems in the repository.
 
 * **main.py**: The entry point of the application. Initializes settings, handles database operations, and manages file interactions.
 
 ## Code Examples
-### Database operations
-#### Create Connection:
-```
+
+### Database Operations
+
+#### Create Connection
+```python
 from sqlite3 import Error, connect
 from os import makedirs
 from os.path import dirname
@@ -73,12 +78,11 @@ def create_connection(db_path):
     except Error as e:
         print(f"An error occurred during creating connection: {e}\n")
     return connection, cursor
-
 ```
 
 #### Execute Queries:
- ```
- def execute_query_print(connection, cursor, query, params=None, to_print=True):
+ ```python
+def execute_query_print(connection, cursor, query, params=None, to_print=True):
     try:
         if params is None:
             cursor.execute(query)
@@ -98,7 +102,7 @@ def create_connection(db_path):
 
  #### File Operations:
  * Insert Files:
- ```
+ ```python
 from os import walk, stat
 from os.path import splitext
 from .utils import get_path
@@ -120,7 +124,7 @@ def insert_files(connection, cursor, file_path, query_insert, table_name):
 
  #### Queries
  * Get Queries:
- ```
+ ```python
 def get_queries(table_name):
     query_create_table = f"""
     CREATE TABLE IF NOT EXISTS {table_name} (
@@ -156,7 +160,7 @@ def get_queries(table_name):
 
 #### Utility Functions
 * Get Path:
-```
+```python
 from os.path import dirname, join, abspath
 
 def get_path(folder_name, file_name=None):
