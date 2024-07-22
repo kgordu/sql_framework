@@ -7,8 +7,22 @@ from src.db_operations import create_connection, execute_query_print, print_tabl
 from src.file_operations import insert_files
 from src.queries import get_queries
 from src.utils import get_path
+import logging
 
-PACKAGE_VERSION = '1.0.0'
+logging.basicConfig(
+  level=logging.INFO,
+  filename='src.log',
+  filemode='a',
+  format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+logger = logging.getLogger(__name__)
+logger.info("Package is initialized")
+
+__version__ = "1.0.0"
+__date__ = "22-06-2024"
+__email__ = "kivancgordu@hotmail.com"
+__status__ = "production"
 
 __all__ = [
   'create_connection', 'execute_query_print',
