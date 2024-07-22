@@ -41,6 +41,24 @@
 
 ## Project Structure
 
+```markdown
+📁 project-root
+├── 📁 config
+│ ├── 📄 __init__.py
+│ └── 📄 constants.py
+│
+├── 📁 src
+│ ├── 📄 __init__.py
+│ ├── 📄 db_operations.py
+│ ├── 📄 queries.py
+│ └── 📄 utiles.py
+│
+├── 📄 .gitignore
+├── 📄 .gitattributes
+└── 📄 main.py
+```
+
+
 * **config/**: Contains configuration files.
   * ***\__init__.py***: Imports constants for database configuration.
   * ***constants.py***: Defines constants used throughout the database.
