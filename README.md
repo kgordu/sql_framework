@@ -1,8 +1,8 @@
-# SQL Framework
+# SQLite3 Framework
 
 ## Overview
 
-**SQL Framework** is a Python-based application designed to interact with an SQLite database. It includes functionalities for creating tables, inserting file data, querying for specific file details, and more. The application provides a comprehensive way to manage and query file information within a database.
+**SQLite3 Framework** is a Python-based application designed to interact with an SQLite database. It includes functionalities for creating tables, inserting file data, querying for specific file details, and more. The application provides a comprehensive way to manage and query file information within a database.
 
 ## Features
 
