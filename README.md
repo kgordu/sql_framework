@@ -1,17 +1,17 @@
 # SQLite3 Framework
 
-## Overview
+## Overview 🦊
 
 **SQLite3 Framework** is a Python-based application designed to interact with an SQLite database. It includes functionalities for creating tables, inserting file data, querying for specific file details, and more. The application provides a comprehensive way to manage and query file information within a database.
 
-## Features
+## Features 🕸
 
 - **Database Management:** Create and manage tables within an SQLite database.
 - **File Insertion:** Insert file details (path, size, extension) into the database.
 - **File Querying:** Retrieve file information based on size or extension.
 - **Dynamic Path Handling:** Automatically determine file paths relative to the project directory.
 
-## Installation
+## Installation ✅
 
 1. **Clone the repository:**
     ```bash
@@ -28,7 +28,7 @@
     pip install -r requirements.txt
     ```
 
-## Usage  
+## Usage 🌐
 
 1. Ensure you have Python 3.x installed.
 
@@ -39,7 +39,7 @@
 
 3. Follow the on-screen prompts to interact with the database, manage file information, and execute queries.
 
-## Project Structure
+## Project Structure 🗺
 
 ```markdown
 📁 project-root
@@ -192,12 +192,12 @@ def get_path(folder_name, file_name=None):
 
 ```
 
-## License
+## License 📰
 
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0) - see the [LICENSE](https://github.com/kivanc57/sql_framework/blob/main/LICENSE) file for details.
 
 
-## Contact
+## Contact 💊
 Let me know if there are any specific details you’d like to adjust or additional sections you want to include!  
 * **Email**: kivancgordu@hotmail.com
 * **Version**: 1.0.0
